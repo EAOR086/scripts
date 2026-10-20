@@ -103,7 +103,7 @@ class StudentManager:
             elif choice == "5":
                 self.display_all_students()
             elif choice == "6":
-                print("退出系统。")
+                print("退出教务系统。")
                 break
             else:
                 print("无效的操作编号，请重新输入。")
