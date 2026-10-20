@@ -7,6 +7,7 @@
 | 文件 | 作用 | 用法 |
 |---|---|---|
 | `word_count.py` | 统计文本里出现次数最多的单词 | `python word_count.py sample.txt` |
+| `student_manager.py` | 学生教务系统丐版 | 'student_manager.py'|
 
 ## 运行方式
 
