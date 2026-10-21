@@ -43,7 +43,7 @@ def get_students():
 def add_student(data:dict):
     name = data.get("name")
 
-    if not name
+    if not name:
         raise  HTTPException(status_code=400,detail="缺少学生姓名")
     for s in students:
         if s.name == name:
@@ -54,10 +54,10 @@ def add_student(data:dict):
         english = int(data["english"])
     except (KeyError,ValueError):
         raise HTTPException(status_code=400,detail="学生成绩必须是整数")
-    if not (0<=chinese<=100 and 0<=math<=100 and 0<=english<=100)
+    if not (0<=chinese<=100 and 0<=math<=100 and 0<=english<=100):
         raise HTTPException(status_code=400,detail="学生成绩必须在0到100区间内")
     students.append(students(name,chinese,math,english))
-    return("message":"添加成功","student":name)
+    return{"message":"添加成功","student":name}
 
 @app.delete("/students/{name}")
 def remove_student(name: str):
